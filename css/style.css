@@ -206,9 +206,13 @@ body {
   margin-top: 54px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
-.card__bottom img {
-  height: 23px;
+.card__master__card img {
+  height: 45px;
+  position: absolute;
+  top: -12px;
+  left: 220px;
 }
 .card__number {
   display: flex;
@@ -235,6 +239,7 @@ body {
   color: #ffffff;
   opacity: 0.41;
 }
+
 .action {
   display: flex;
   justify-content: space-between;
