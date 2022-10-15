@@ -111,7 +111,7 @@ body {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-  margin-left: -80px;
+  /* margin-left: -80px; */
 }
 .right__side__bar {
   display: flex;
