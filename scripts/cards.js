@@ -84,12 +84,35 @@ function onTouch(event) {
     document.querySelector("body").style.overflowY = "visible";
 
     //Плавная прокрутка карт при отпускании
-    for (let i = 0; i < card.length; i++){
+    for (let i = 0; i < card.length; i++) {
       document.querySelectorAll(".card")[i].style.transition = "0.3s";
     }
     for (let i = 0; i < card.length; i++) {
       document.querySelectorAll(".card")[i].style.left =
         (i - currientCard) * cardWidth + 10 + (i - currientCard) * 10 + "px";
+    }
+    setActiveIndicator();
+  }
+}
+
+//Заполнение индикатора
+for (let i = 0; i < card.length; i++) {
+  let newIndicator = document.createElement("div");
+  newIndicator.classList.add("indicator");
+  document
+    .querySelector(".nav__top__right")
+    .insertAdjacentElement("afterBegin", newIndicator);
+}
+setActiveIndicator();
+
+function setActiveIndicator(){
+  for(let i = 0; i< card.length; i++){
+    if(currientCard === i){
+      document.querySelectorAll('.indicator')[i].classList.add('indicator__active');
+    }else{
+      if(document.querySelectorAll('.indicator')[i].classList.contains('indicator__active')){
+        document.querySelectorAll('.indicator')[i].classList.toggle('indicator__active');
+      }
     }
   }
 }
