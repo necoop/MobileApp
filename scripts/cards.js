@@ -85,7 +85,7 @@ function onTouch(event) {
 
     //Плавная прокрутка карт при отпускании
     for (let i = 0; i < card.length; i++){
-      document.querySelectorAll(".card")[i].style.transition = "0.6s";
+      document.querySelectorAll(".card")[i].style.transition = "0.3s";
     }
     for (let i = 0; i < card.length; i++) {
       document.querySelectorAll(".card")[i].style.left =
